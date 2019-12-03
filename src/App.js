@@ -22,6 +22,22 @@ const ProfileDetails = () => {
         <li>City: {user.address.city}</li>
       </ul>
     </div>
+  );
+}
+
+const ProfilePosts = () => {
+  const posts = resource.posts.read();
+  return (
+    <ul className='list-group'>
+      <li className='list-group-item'>
+        <strong>Latest posts</strong>
+      </li>
+      {posts.map(post => (
+        <li className='list-group-item' key={post.id}>
+          {post.title}
+        </li>
+      ))}
+    </ul>
   )
 }
 
