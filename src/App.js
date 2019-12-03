@@ -10,8 +10,6 @@ const App = () => (
   <div className='container my-5'>
     <Suspense fallback={<Spinner />}>
       <ProfileDetails />
-    </Suspense>
-    <Suspense fallback={<Spinner />}>
       <ProfilePosts />
     </Suspense>
   </div>
