@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import './App.css';
 
 import { fetchData } from './Api';
+import spinner from './spinner.gif';
 
 const resource = fetchData();
 
@@ -28,7 +29,7 @@ const ProfileDetails = () => {
       </ul>
     </div>
   );
-}
+};
 
 const ProfilePosts = () => {
   const posts = resource.posts.read();
@@ -44,6 +45,14 @@ const ProfilePosts = () => {
       ))}
     </ul>
   )
-}
+};
+
+const Spinner = () => (
+  <img
+    src={spinner}
+    style={{ width: '200px', margin: 'auto', display: 'block' }}
+    alt='Loading...'
+  />
+);
 
 export default App;
