@@ -1,6 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Suspense } from 'react';
 import './App.css';
+
+import { fetchData } from './Api';
+
+const resource = fetchData();
 
 function App() {
   return (
